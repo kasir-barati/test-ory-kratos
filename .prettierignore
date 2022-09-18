@@ -1,0 +1,11 @@
+LICENSE
+Docker*
+**/*.yml
+**/*.yaml
+**/Dockerfile
+**/*Dockerfile*
+**/dist
+**/node_modules
+**/*.tsbuildinfo
+logs
+**/*.hbs
