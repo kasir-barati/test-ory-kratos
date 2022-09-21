@@ -6,6 +6,7 @@ import { AppService } from './app.service';
 import { AppController } from './app.controller';
 import { OryModule } from '@src/modules/ory/ory.module';
 import { KratosModule } from '@src/modules/kratos/kratos.module';
+import { UserModule } from '@src/modules/user/user.module';
 
 @Module({
     imports: [
@@ -17,6 +18,7 @@ import { KratosModule } from '@src/modules/kratos/kratos.module';
         }),
         OryModule,
         KratosModule,
+        UserModule,
     ],
     controllers: [AppController],
     providers: [AppService],

@@ -74,4 +74,25 @@ export class KratosService {
             throw e;
         }
     }
+
+    async getIdentityById(id: string): Promise<Identity> {
+        const response = await this.kratos.adminGetIdentity(id);
+
+        return response.data;
+    }
+
+    async createIdentity(email: string): Promise<Identity> {
+        try {
+            const res = await this.kratos.adminCreateIdentity({
+                schema_id: 'default',
+                traits: {
+                    email,
+                },
+            });
+
+            return res.data;
+        } catch (e) {
+            throw e;
+        }
+    }
 }
